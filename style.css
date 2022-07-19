@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*::before,
+*::after,
+* {
+  box-sizing: border-box;
+}
+:root {
+  --white: hsl(0, 0%, 100%);
+  --red: hsl(345, 95%, 68%);
+  --blue: hsl(237, 18%, 59%);
+  --mostly-dark: hsl(234, 17%, 12%);
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  font-family: "Red Hat Text", sans-serif;
+  font-size: 14px;
+  background-color: hsl(235, 16%, 14%);
+  background-image: url(./images/bg-stars.svg);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: var(--white);
+  flex-direction: column;
+  position: relative;
+  width: 100vw;
+}
+
+.container {
+  max-width: 90vw;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 2vw;
+  padding-left: 2vw;
+}
+footer {
+  margin-top: auto;
+  margin-bottom: 2rem;
+  z-index: 999;
+  width: 100vw;
+}
+
+.social-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+.social-icon .icon {
+  margin: 0 1rem;
+  cursor: pointer;
+}
+
+.countdown {
+  margin-top: 22vh;
+  max-width: 431px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.countdown .title {
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+.countdown-time {
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+  text-align: center;
+  flex-wrap: wrap;
+  margin-top: 5rem;
+}
+.countdown-time .time-box {
+  width: calc(90% / 4);
+}
+
+.countdown-time .time-box .time {
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  font-size: 0.5rem;
+  margin: 10px 0;
+  opacity: 0.7;
+}
+
+.countdown-time .time-box .number {
+  font-size: 2.5rem;
+  color: var(--red);
+  font-weight: 700;
+  position: relative;
+  margin: auto;
+  height: 100px;
+  line-height: 100px;
+}
+.time-box .number::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 50px;
+  width: 100%;
+  background: hsl(234deg 23% 19%);
+  z-index: -1;
+  border-radius: 5px;
+}
+
+.time-box .number::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 50px;
+  width: 100%;
+  background: hsl(234deg 19% 23%);
+  z-index: -1;
+  border-radius: 5px;
+}
+
+.bg-image {
+  width: 100%;
+  background-image: url(./images/pattern-hills.svg);
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  height: 163px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -9;
+}
